@@ -12,6 +12,7 @@ module.exports = function(RED) {
             password : node.credentials.password,
             server : config.server,
             database : config.database,
+            port: config.port,
             options : {
                            encrypt : config.encyption
                        }
