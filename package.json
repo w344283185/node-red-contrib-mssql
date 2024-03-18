@@ -4,7 +4,7 @@
   "description": "Node for node-red to connect to a Microsoft MS SQL Database",
   "main": "odbc.js",
   "dependencies": {
-    "mssql": ">=3.0.1",
+    "mssql": ">=3.0.1 <4.0.0",
     "mustache": "latest"
   },
   "node-red": {
@@ -13,7 +13,9 @@
     }
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "npm version patch && git push --tags",
+    "postrelease": "npm publish . && git push"
   },
   "repository": {
     "type": "git",
